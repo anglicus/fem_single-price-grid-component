@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 37%, 56%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --dim-yellow:  hsl(71, 53%, 60%);
+
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --shadow-blue: hsla(215, 16%, 76%, 0.74);
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+   background-color: var(--light-gray);
+}
+
+#hero {
+    width: 636px;
+    margin: auto;
+    margin-top: 163px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 12px 12px 15px 0px var(--shadow-blue);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "intro intro"
+        "pricing features";
+    justify-content: stretch;
+}
+
+section {
+    width: 100%;
+    padding: 20px 41px 0px;
+    box-sizing: border-box;
+}
+
+section h3 {
+    color: var(--light-gray);
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+#intro {
+    background-color: white;
+    grid-area: intro;
+    padding-bottom: 32px;
+}
+
+#intro h1 {
+    color: var(--cyan);
+}
+
+#intro h2 {
+    color: var(--bright-yellow);
+    font-size: 1.1rem;
+    margin: 24px 0px 12px;
+}
+
+#intro p {
+    color: var(--grayish-blue);
+    margin-top: 0;
+    font-size: 0.975rem;
+    line-height: 1.45rem;
+}
+
+#pricing {
+    background-color: var(--cyan);
+    grid-area: pricing;
+}
+
+#pricing p {
+    color: var(--light-gray);
+    font-size: 0.95rem;
+}
+
+#price-quote {
+    color: var(--light-gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#price-amount {
+
+    font-size: 2.15rem;
+    font-weight: 700;
+    letter-spacing: -0.1rem;
+    margin-right: 8px;
+}
+
+#full-access {
+    letter-spacing: 0.01rem;
+    margin-top: 5px;
+    margin-bottom: 28px;
+}
+
+#signup {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--light-gray);
+    height: 3.2rem;
+    width: 100%;
+    background-color: var(--bright-yellow);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#signup:hover {
+    background-color: var(--dim-yellow);
+}
+
+#features {
+    background-color: var(--light-cyan);
+    grid-area: features;
+}
+
+ul {
+    color: var(--light-gray);
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 46px;
+}
+
+li {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.attribution { margin-top: 48px; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width: 375px) {
+
+
+    #hero {
+        width: 310px;
+        margin-top: 75px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "intro"
+            "pricing"
+            "features";
+    }
+
+    section {
+        padding: 10px 24px 20px;
+    }
+
+    #intro {
+        padding-bottom: 34px;
+    }
+
+    #intro h1 {
+        font-size: 1.15rem;
+        letter-spacing: 0.035rem;
+    }
+
+    #intro h2 {
+        font-size: 0.92rem;
+        line-height: 1.3rem;
+        margin-bottom: 16px;
+    }
+
+    #intro p {
+        font-size: 0.855rem;
+        line-height: 1.6rem;
+        margin-bottom: 0;
+    }
+
+    section h3 {
+        margin-top: 12px;
+    }
+
+    #signup {
+        margin-bottom: 6px;
+    }
+
+    ul {
+        margin-bottom: 8px;
+    }
+}
